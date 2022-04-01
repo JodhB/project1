@@ -1,0 +1,1259 @@
+24 03 2022 - 13:33:04.890 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+24 03 2022 - 13:33:04.901 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @774ms to org.eclipse.jetty.util.log.Slf4jLog
+24 03 2022 - 13:33:04.902 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+24 03 2022 - 13:33:04.921 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+24 03 2022 - 13:33:05.090 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+24 03 2022 - 13:33:05.090 [main] INFO  io.javalin.Javalin - Javalin started in 188ms \o/
+24 03 2022 - 13:33:41.828 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "jodh_"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.utility.ConnectionUtility.getConnection(ConnectionUtility.java:19)
+	at com.revature.dao.UserDao.getUserByUsernameAndPassword(UserDao.java:17)
+	at com.revature.service.UserService.login(UserService.java:22)
+	at com.revature.controller.AuthenticationController.lambda$new$0(AuthenticationController.java:24)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+24 03 2022 - 13:35:00.745 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+24 03 2022 - 13:35:00.758 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @755ms to org.eclipse.jetty.util.log.Slf4jLog
+24 03 2022 - 13:35:00.759 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+24 03 2022 - 13:35:00.775 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+24 03 2022 - 13:35:00.968 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+24 03 2022 - 13:35:00.969 [main] INFO  io.javalin.Javalin - Javalin started in 210ms \o/
+24 03 2022 - 13:35:06.202 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "jodh_"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.utility.ConnectionUtility.getConnection(ConnectionUtility.java:19)
+	at com.revature.dao.UserDao.getUserByUsernameAndPassword(UserDao.java:17)
+	at com.revature.service.UserService.login(UserService.java:22)
+	at com.revature.controller.AuthenticationController.lambda$new$0(AuthenticationController.java:24)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+24 03 2022 - 13:38:16.468 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+24 03 2022 - 13:38:16.479 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @743ms to org.eclipse.jetty.util.log.Slf4jLog
+24 03 2022 - 13:38:16.480 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+24 03 2022 - 13:38:16.496 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+24 03 2022 - 13:38:16.651 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+24 03 2022 - 13:38:16.651 [main] INFO  io.javalin.Javalin - Javalin started in 172ms \o/
+24 03 2022 - 13:38:29.915 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
+org.postgresql.util.PSQLException: The column name first_name was not found in this ResultSet.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2901)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2758)
+	at com.revature.dao.UserDao.getUserByUsernameAndPassword(UserDao.java:33)
+	at com.revature.service.UserService.login(UserService.java:22)
+	at com.revature.controller.AuthenticationController.lambda$new$0(AuthenticationController.java:24)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+24 03 2022 - 13:42:53.979 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+24 03 2022 - 13:42:53.988 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @875ms to org.eclipse.jetty.util.log.Slf4jLog
+24 03 2022 - 13:42:53.989 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+24 03 2022 - 13:42:54.005 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+24 03 2022 - 13:42:54.156 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+24 03 2022 - 13:42:54.157 [main] INFO  io.javalin.Javalin - Javalin started in 168ms \o/
+24 03 2022 - 13:45:49.688 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+24 03 2022 - 13:45:49.698 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @725ms to org.eclipse.jetty.util.log.Slf4jLog
+24 03 2022 - 13:45:49.699 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+24 03 2022 - 13:45:49.715 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+24 03 2022 - 13:45:49.872 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+24 03 2022 - 13:45:49.872 [main] INFO  io.javalin.Javalin - Javalin started in 173ms \o/
+24 03 2022 - 13:50:17.434 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+24 03 2022 - 13:50:17.444 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @751ms to org.eclipse.jetty.util.log.Slf4jLog
+24 03 2022 - 13:50:17.445 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+24 03 2022 - 13:50:17.462 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+24 03 2022 - 13:50:17.610 [main] ERROR io.javalin.Javalin - Failed to start Javalin
+24 03 2022 - 13:50:17.610 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+24 03 2022 - 13:50:17.617 [main] INFO  io.javalin.Javalin - Javalin has stopped
+24 03 2022 - 13:51:17.098 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+24 03 2022 - 13:51:17.108 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @747ms to org.eclipse.jetty.util.log.Slf4jLog
+24 03 2022 - 13:51:17.109 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+24 03 2022 - 13:51:17.124 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+24 03 2022 - 13:51:17.273 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+24 03 2022 - 13:51:17.273 [main] INFO  io.javalin.Javalin - Javalin started in 164ms \o/
+24 03 2022 - 13:52:50.278 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
+java.lang.NullPointerException: null
+	at com.revature.dao.ReimbursementDao.getReimbursements(ReimbursementDao.java:93)
+	at com.revature.service.ReimbursementService.getReimbursements(ReimbursementService.java:46)
+	at com.revature.controller.ReimbursementController.lambda$new$1(ReimbursementController.java:53)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+24 03 2022 - 14:03:11.831 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+24 03 2022 - 14:03:11.841 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @788ms to org.eclipse.jetty.util.log.Slf4jLog
+24 03 2022 - 14:03:11.843 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+24 03 2022 - 14:03:11.861 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+24 03 2022 - 14:03:12.066 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+24 03 2022 - 14:03:12.066 [main] INFO  io.javalin.Javalin - Javalin started in 224ms \o/
+27 03 2022 - 12:29:27.985 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+27 03 2022 - 12:29:27.996 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @797ms to org.eclipse.jetty.util.log.Slf4jLog
+27 03 2022 - 12:29:27.997 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+27 03 2022 - 12:29:28.016 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+27 03 2022 - 12:29:28.177 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+27 03 2022 - 12:29:28.177 [main] INFO  io.javalin.Javalin - Javalin started in 180ms \o/
+27 03 2022 - 12:35:56.852 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+27 03 2022 - 12:35:56.864 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @740ms to org.eclipse.jetty.util.log.Slf4jLog
+27 03 2022 - 12:35:56.865 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+27 03 2022 - 12:35:56.887 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+27 03 2022 - 12:35:57.044 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+27 03 2022 - 12:35:57.044 [main] INFO  io.javalin.Javalin - Javalin started in 180ms \o/
+27 03 2022 - 12:42:19.677 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
+org.postgresql.util.PSQLException: No value specified for parameter 4.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:339)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:134)
+	at com.revature.dao.ReimbursementDao.handleReimbursement(ReimbursementDao.java:175)
+	at com.revature.service.ReimbursementService.handleReimbursement(ReimbursementService.java:95)
+	at com.revature.controller.ReimbursementController.lambda$new$4(ReimbursementController.java:112)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+27 03 2022 - 15:04:26.433 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+27 03 2022 - 15:04:26.445 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @717ms to org.eclipse.jetty.util.log.Slf4jLog
+27 03 2022 - 15:04:26.446 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+27 03 2022 - 15:04:26.460 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+27 03 2022 - 15:04:26.608 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+27 03 2022 - 15:04:26.608 [main] INFO  io.javalin.Javalin - Javalin started in 163ms \o/
+27 03 2022 - 15:06:37.136 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "status_id"
+  Position: 56
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:134)
+	at com.revature.dao.ReimbursementDao.handleReimbursement(ReimbursementDao.java:175)
+	at com.revature.service.ReimbursementService.handleReimbursement(ReimbursementService.java:95)
+	at com.revature.controller.ReimbursementController.lambda$new$4(ReimbursementController.java:111)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+27 03 2022 - 15:18:21.944 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+27 03 2022 - 15:18:21.954 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @723ms to org.eclipse.jetty.util.log.Slf4jLog
+27 03 2022 - 15:18:21.955 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+27 03 2022 - 15:18:21.972 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+27 03 2022 - 15:18:22.124 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+27 03 2022 - 15:18:22.125 [main] INFO  io.javalin.Javalin - Javalin started in 170ms \o/
+28 03 2022 - 10:19:59.620 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+28 03 2022 - 10:19:59.632 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @786ms to org.eclipse.jetty.util.log.Slf4jLog
+28 03 2022 - 10:19:59.633 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+28 03 2022 - 10:19:59.653 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+28 03 2022 - 10:19:59.814 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+28 03 2022 - 10:19:59.814 [main] INFO  io.javalin.Javalin - Javalin started in 181ms \o/
+29 03 2022 - 13:16:14.177 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+29 03 2022 - 13:16:14.192 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @824ms to org.eclipse.jetty.util.log.Slf4jLog
+29 03 2022 - 13:16:14.193 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+29 03 2022 - 13:16:14.214 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+29 03 2022 - 13:16:14.396 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+29 03 2022 - 13:16:14.396 [main] INFO  io.javalin.Javalin - Javalin started in 203ms \o/
+29 03 2022 - 13:16:40.324 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+29 03 2022 - 13:16:40.901 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+29 03 2022 - 13:16:40.909 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+29 03 2022 - 13:16:40.985 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+29 03 2022 - 13:16:58.234 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+29 03 2022 - 13:16:58.238 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+29 03 2022 - 13:16:58.312 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+29 03 2022 - 13:16:58.353 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+29 03 2022 - 13:17:09.844 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+29 03 2022 - 13:17:09.847 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+29 03 2022 - 13:17:09.898 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+29 03 2022 - 13:17:09.938 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /reimbursements/3/image
+29 03 2022 - 13:17:21.715 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+29 03 2022 - 13:17:21.718 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+29 03 2022 - 13:17:21.772 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+29 03 2022 - 13:17:21.820 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements/4/image
+29 03 2022 - 13:17:52.094 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+29 03 2022 - 13:17:52.226 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:17:52.229 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:21:30.126 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:21:30.131 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:22:03.084 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:22:03.118 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:22:05.818 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:25:03.021 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:25:03.028 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:25:06.632 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:25:16.859 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:25:16.862 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:25:44.206 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - POST request received for /login
+29 03 2022 - 13:25:44.350 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+29 03 2022 - 13:25:44.352 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+29 03 2022 - 13:25:44.394 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+29 03 2022 - 13:25:44.395 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /reimbursements/3/image
+29 03 2022 - 13:25:44.396 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+29 03 2022 - 13:25:44.398 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - GET request received for /reimbursements/4/image
+29 03 2022 - 13:26:00.932 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - POST request received for /login
+29 03 2022 - 13:26:01.073 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:26:01.075 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:26:21.185 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:26:21.188 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:26:21.236 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - GET request received for /reimbursements/4/image
+29 03 2022 - 13:26:21.236 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - GET request received for /reimbursements/3/image
+29 03 2022 - 13:26:21.240 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+29 03 2022 - 13:26:21.332 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+29 03 2022 - 13:26:43.106 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:26:43.109 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:26:45.652 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:26:45.692 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+29 03 2022 - 13:26:47.942 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:26:49.379 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:26:49.382 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:26:53.086 [JettyServerThreadPool-26] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements/4
+29 03 2022 - 13:26:53.089 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - PATCH request received for /reimbursements/4
+29 03 2022 - 13:26:53.129 [JettyServerThreadPool-25] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:26:58.383 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:26:58.384 [JettyServerThreadPool-25] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:27:05.155 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements/3
+29 03 2022 - 13:27:05.158 [JettyServerThreadPool-25] INFO  com.revature.main.project1 - PATCH request received for /reimbursements/3
+29 03 2022 - 13:27:05.198 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:27:05.200 [JettyServerThreadPool-25] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:27:06.679 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements/2
+29 03 2022 - 13:27:06.681 [JettyServerThreadPool-25] INFO  com.revature.main.project1 - PATCH request received for /reimbursements/2
+29 03 2022 - 13:27:06.718 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:27:09.890 [JettyServerThreadPool-25] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:27:09.930 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements/4/image
+29 03 2022 - 13:27:19.491 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 13:27:19.494 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:27:19.535 [JettyServerThreadPool-25] INFO  com.revature.main.project1 - GET request received for /reimbursements/3/image
+29 03 2022 - 13:27:19.537 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+29 03 2022 - 13:27:21.522 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 13:27:55.111 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - POST request received for /login
+29 03 2022 - 13:27:55.243 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+29 03 2022 - 13:27:55.246 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+29 03 2022 - 13:27:55.287 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - GET request received for /reimbursements/4/image
+29 03 2022 - 13:27:55.288 [JettyServerThreadPool-25] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+29 03 2022 - 13:27:55.293 [JettyServerThreadPool-26] INFO  com.revature.main.project1 - GET request received for /reimbursements/3/image
+29 03 2022 - 13:27:55.295 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+29 03 2022 - 20:19:46.982 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+29 03 2022 - 20:19:46.997 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @725ms to org.eclipse.jetty.util.log.Slf4jLog
+29 03 2022 - 20:19:46.998 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+29 03 2022 - 20:19:47.028 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+29 03 2022 - 20:19:47.208 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+29 03 2022 - 20:19:47.209 [main] INFO  io.javalin.Javalin - Javalin started in 211ms \o/
+29 03 2022 - 20:20:19.028 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+29 03 2022 - 20:20:19.582 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+29 03 2022 - 20:20:19.585 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+29 03 2022 - 20:20:19.693 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+29 03 2022 - 20:20:19.693 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /reimbursements/3/image
+29 03 2022 - 20:20:19.704 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /reimbursements/4/image
+29 03 2022 - 20:20:19.705 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+29 03 2022 - 20:20:49.341 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - POST request received for /login
+29 03 2022 - 20:20:49.477 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 20:20:49.482 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 20:20:49.517 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - GET request received for /reimbursements/4/image
+29 03 2022 - 20:20:49.518 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements/3/image
+29 03 2022 - 20:20:49.519 [JettyServerThreadPool-24] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+29 03 2022 - 20:20:49.521 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+29 03 2022 - 20:21:09.084 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 20:21:09.086 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 20:21:11.098 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 20:21:14.991 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 20:21:14.995 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 20:21:17.141 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 20:21:19.806 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 20:21:21.349 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+29 03 2022 - 20:21:21.352 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 20:21:22.779 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - GET request received for /reimbursements
+29 03 2022 - 20:30:58.168 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+29 03 2022 - 20:30:58.180 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1058ms to org.eclipse.jetty.util.log.Slf4jLog
+29 03 2022 - 20:30:58.181 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+29 03 2022 - 20:30:58.197 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+29 03 2022 - 20:30:58.385 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+29 03 2022 - 20:30:58.386 [main] INFO  io.javalin.Javalin - Javalin started in 205ms \o/
+29 03 2022 - 20:31:27.833 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+29 03 2022 - 20:31:28.375 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+29 03 2022 - 20:31:28.378 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+29 03 2022 - 20:31:28.447 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+29 03 2022 - 20:31:28.448 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /reimbursements/4/image
+29 03 2022 - 20:31:28.454 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+29 03 2022 - 20:31:28.454 [JettyServerThreadPool-14] INFO  com.revature.main.project1 - GET request received for /reimbursements/3/image
+29 03 2022 - 20:31:40.772 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+29 03 2022 - 20:31:40.775 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+29 03 2022 - 20:31:40.993 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+29 03 2022 - 20:31:41.030 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /reimbursements/5/image
+30 03 2022 - 13:53:10.031 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 13:53:10.043 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @778ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 13:53:10.044 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 13:53:10.064 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 13:53:10.234 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 13:53:10.235 [main] INFO  io.javalin.Javalin - Javalin started in 191ms \o/
+30 03 2022 - 13:53:32.092 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+30 03 2022 - 13:53:32.620 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 13:53:32.633 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 13:53:51.858 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 13:53:51.861 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+30 03 2022 - 13:53:51.890 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
+java.lang.NullPointerException: null
+	at java.io.FileInputStream.<init>(FileInputStream.java:130)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at com.revature.utility.CloudStorageUtility.getBucket(CloudStorageUtility.java:30)
+	at com.revature.utility.CloudStorageUtility.uploadFile(CloudStorageUtility.java:22)
+	at com.revature.service.ReimbursementService.addReimbursement(ReimbursementService.java:82)
+	at com.revature.controller.ReimbursementController.lambda$new$3(ReimbursementController.java:90)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+30 03 2022 - 13:53:51.896 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:01:05.252 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 14:01:05.262 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @753ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 14:01:05.263 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 14:01:05.279 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 14:01:05.441 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 14:01:05.441 [main] INFO  io.javalin.Javalin - Javalin started in 178ms \o/
+30 03 2022 - 14:01:18.136 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+30 03 2022 - 14:01:18.652 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:01:18.655 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:01:26.495 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:01:26.498 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+30 03 2022 - 14:01:26.524 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
+java.lang.NullPointerException: null
+	at java.io.FileInputStream.<init>(FileInputStream.java:130)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at com.revature.utility.CloudStorageUtility.getBucket(CloudStorageUtility.java:30)
+	at com.revature.utility.CloudStorageUtility.uploadFile(CloudStorageUtility.java:22)
+	at com.revature.service.ReimbursementService.addReimbursement(ReimbursementService.java:82)
+	at com.revature.controller.ReimbursementController.lambda$new$3(ReimbursementController.java:90)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+30 03 2022 - 14:01:26.529 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:03:00.732 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 14:03:00.742 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @774ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 14:03:00.744 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 14:03:00.760 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 14:03:00.929 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 14:03:00.929 [main] INFO  io.javalin.Javalin - Javalin started in 186ms \o/
+30 03 2022 - 14:03:11.310 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+30 03 2022 - 14:03:11.928 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:03:11.940 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:03:18.599 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:03:18.603 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+30 03 2022 - 14:03:18.629 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
+java.lang.NullPointerException: null
+	at java.io.FileInputStream.<init>(FileInputStream.java:130)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at com.revature.utility.CloudStorageUtility.getBucket(CloudStorageUtility.java:31)
+	at com.revature.utility.CloudStorageUtility.uploadFile(CloudStorageUtility.java:22)
+	at com.revature.service.ReimbursementService.addReimbursement(ReimbursementService.java:82)
+	at com.revature.controller.ReimbursementController.lambda$new$3(ReimbursementController.java:90)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+30 03 2022 - 14:03:18.634 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:05:13.848 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 14:05:13.860 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @773ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 14:05:13.861 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 14:05:13.879 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 14:05:14.036 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 14:05:14.036 [main] INFO  io.javalin.Javalin - Javalin started in 176ms \o/
+30 03 2022 - 14:10:13.894 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 14:10:13.907 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @790ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 14:10:13.908 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 14:10:13.935 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 14:10:14.099 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 14:10:14.099 [main] INFO  io.javalin.Javalin - Javalin started in 192ms \o/
+30 03 2022 - 14:10:56.343 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 14:10:56.354 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @873ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 14:10:56.356 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 14:10:56.377 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 14:10:56.550 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 14:10:56.550 [main] INFO  io.javalin.Javalin - Javalin started in 195ms \o/
+30 03 2022 - 14:12:43.881 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 14:12:43.892 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @786ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 14:12:43.894 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 14:12:43.909 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 14:12:44.068 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 14:12:44.069 [main] INFO  io.javalin.Javalin - Javalin started in 176ms \o/
+30 03 2022 - 14:13:01.027 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+30 03 2022 - 14:13:01.561 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:13:01.564 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:13:07.099 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:13:07.102 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+30 03 2022 - 14:13:09.436 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:13:09.486 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+30 03 2022 - 14:25:13.292 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 14:25:13.303 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @782ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 14:25:13.304 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 14:25:13.320 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 14:25:13.481 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 14:25:13.481 [main] INFO  io.javalin.Javalin - Javalin started in 178ms \o/
+30 03 2022 - 14:25:28.559 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+30 03 2022 - 14:25:29.063 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:25:29.066 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:25:29.242 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+30 03 2022 - 14:25:36.635 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:25:36.638 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+30 03 2022 - 14:25:39.113 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:25:39.145 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+30 03 2022 - 14:25:39.147 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+30 03 2022 - 14:33:21.539 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 14:33:21.548 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @772ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 14:33:21.549 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 14:33:21.565 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 14:33:21.727 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 14:33:21.727 [main] INFO  io.javalin.Javalin - Javalin started in 178ms \o/
+30 03 2022 - 14:33:35.430 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+30 03 2022 - 14:33:35.961 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:33:35.964 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:33:36.029 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+30 03 2022 - 14:33:36.029 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+30 03 2022 - 14:33:45.434 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:33:45.438 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+30 03 2022 - 14:33:47.695 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
+com.google.cloud.storage.StorageException: Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access
+	at com.google.cloud.storage.spi.v1.HttpStorageRpc.translate(HttpStorageRpc.java:233)
+	at com.google.cloud.storage.spi.v1.HttpStorageRpc.createAcl(HttpStorageRpc.java:1320)
+	at com.google.cloud.storage.StorageImpl.lambda$createAcl$39(StorageImpl.java:1198)
+	at com.google.api.gax.retrying.DirectRetryingExecutor.submit(DirectRetryingExecutor.java:105)
+	at com.google.cloud.RetryHelper.run(RetryHelper.java:76)
+	at com.google.cloud.RetryHelper.runWithRetries(RetryHelper.java:50)
+	at com.google.cloud.storage.Retrying.run(Retrying.java:51)
+	at com.google.cloud.storage.StorageImpl.run(StorageImpl.java:1374)
+	at com.google.cloud.storage.StorageImpl.createAcl(StorageImpl.java:1198)
+	at com.revature.utility.CloudStorageUtility.uploadFile(CloudStorageUtility.java:27)
+	at com.revature.service.ReimbursementService.addReimbursement(ReimbursementService.java:82)
+	at com.revature.controller.ReimbursementController.lambda$new$3(ReimbursementController.java:90)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.google.api.client.googleapis.json.GoogleJsonResponseException: 400 Bad Request
+POST https://storage.googleapis.com/storage/v1/b/project1-images/o/testing.jpg/acl
+{
+  "code" : 400,
+  "errors" : [ {
+    "domain" : "global",
+    "message" : "Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access",
+    "reason" : "invalid"
+  } ],
+  "message" : "Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access"
+}
+	at com.google.api.client.googleapis.json.GoogleJsonResponseException.from(GoogleJsonResponseException.java:146)
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:118)
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:37)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest$1.interceptResponse(AbstractGoogleClientRequest.java:428)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1111)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:514)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:455)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.execute(AbstractGoogleClientRequest.java:565)
+	at com.google.cloud.storage.spi.v1.HttpStorageRpc.createAcl(HttpStorageRpc.java:1317)
+	... 50 common frames omitted
+30 03 2022 - 14:33:47.700 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:33:47.752 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+30 03 2022 - 14:33:47.754 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+30 03 2022 - 14:37:23.556 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 14:37:23.566 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @790ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 14:37:23.567 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 14:37:23.584 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 14:37:23.744 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 14:37:23.745 [main] INFO  io.javalin.Javalin - Javalin started in 178ms \o/
+30 03 2022 - 14:37:34.577 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+30 03 2022 - 14:37:35.079 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:37:35.090 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:37:35.181 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+30 03 2022 - 14:37:35.183 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+30 03 2022 - 14:37:43.532 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 14:37:43.535 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+30 03 2022 - 14:37:45.764 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
+com.google.cloud.storage.StorageException: Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access
+	at com.google.cloud.storage.spi.v1.HttpStorageRpc.translate(HttpStorageRpc.java:233)
+	at com.google.cloud.storage.spi.v1.HttpStorageRpc.createAcl(HttpStorageRpc.java:1320)
+	at com.google.cloud.storage.StorageImpl.lambda$createAcl$39(StorageImpl.java:1198)
+	at com.google.api.gax.retrying.DirectRetryingExecutor.submit(DirectRetryingExecutor.java:105)
+	at com.google.cloud.RetryHelper.run(RetryHelper.java:76)
+	at com.google.cloud.RetryHelper.runWithRetries(RetryHelper.java:50)
+	at com.google.cloud.storage.Retrying.run(Retrying.java:51)
+	at com.google.cloud.storage.StorageImpl.run(StorageImpl.java:1374)
+	at com.google.cloud.storage.StorageImpl.createAcl(StorageImpl.java:1198)
+	at com.revature.utility.CloudStorageUtility.uploadFile(CloudStorageUtility.java:29)
+	at com.revature.service.ReimbursementService.addReimbursement(ReimbursementService.java:82)
+	at com.revature.controller.ReimbursementController.lambda$new$3(ReimbursementController.java:90)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.google.api.client.googleapis.json.GoogleJsonResponseException: 400 Bad Request
+POST https://storage.googleapis.com/storage/v1/b/project1-images/o/testing.jpg/acl
+{
+  "code" : 400,
+  "errors" : [ {
+    "domain" : "global",
+    "message" : "Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access",
+    "reason" : "invalid"
+  } ],
+  "message" : "Cannot update access control for an object when uniform bucket-level access is enabled. Read more at https://cloud.google.com/storage/docs/uniform-bucket-level-access"
+}
+	at com.google.api.client.googleapis.json.GoogleJsonResponseException.from(GoogleJsonResponseException.java:146)
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:118)
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:37)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest$1.interceptResponse(AbstractGoogleClientRequest.java:428)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1111)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:514)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:455)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.execute(AbstractGoogleClientRequest.java:565)
+	at com.google.cloud.storage.spi.v1.HttpStorageRpc.createAcl(HttpStorageRpc.java:1317)
+	... 50 common frames omitted
+30 03 2022 - 14:37:45.769 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 14:37:45.834 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /reimbursements/1/image
+30 03 2022 - 14:37:45.840 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - GET request received for /reimbursements/2/image
+30 03 2022 - 15:14:29.844 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 15:14:29.854 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @747ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 15:14:29.855 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 15:14:29.871 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 15:14:30.044 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 15:14:30.044 [main] INFO  io.javalin.Javalin - Javalin started in 189ms \o/
+30 03 2022 - 15:14:46.426 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - POST request received for /login
+30 03 2022 - 15:14:46.930 [JettyServerThreadPool-13] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 15:14:46.932 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 19:07:02.175 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 19:07:02.196 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1940ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 19:07:02.197 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 19:07:02.221 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 19:07:02.433 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 19:07:02.434 [main] INFO  io.javalin.Javalin - Javalin started in 237ms \o/
+30 03 2022 - 19:07:38.919 [JettyServerThreadPool-16] INFO  com.revature.main.project1 - POST request received for /login
+30 03 2022 - 19:07:39.402 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 19:07:39.405 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 19:07:49.833 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 19:07:49.836 [JettyServerThreadPool-15] INFO  com.revature.main.project1 - POST request received for /users/1/reimbursements
+30 03 2022 - 19:07:51.989 [JettyServerThreadPool-17] INFO  com.revature.main.project1 - GET request received for /users/1/reimbursements
+30 03 2022 - 19:11:36.318 [JettyServerThreadPool-12] INFO  com.revature.main.project1 - POST request received for /login
+30 03 2022 - 19:11:36.435 [JettyServerThreadPool-11] INFO  com.revature.main.project1 - OPTIONS request received for /reimbursements
+30 03 2022 - 19:11:36.438 [JettyServerThreadPool-18] INFO  com.revature.main.project1 - GET request received for /reimbursements
+30 03 2022 - 20:09:36.361 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 20:09:36.372 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @779ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 20:09:36.373 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 20:09:36.389 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 20:09:36.545 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 20:09:36.545 [main] INFO  io.javalin.Javalin - Javalin started in 172ms \o/
+30 03 2022 - 20:09:48.923 [JettyServerThreadPool-16] INFO  com.revature.main.Main - POST request received for /login
+30 03 2022 - 20:09:49.432 [JettyServerThreadPool-12] INFO  com.revature.main.Main - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 20:09:49.434 [JettyServerThreadPool-15] INFO  com.revature.main.Main - GET request received for /users/1/reimbursements
+30 03 2022 - 20:12:02.781 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 20:12:02.792 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @801ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 20:12:02.793 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 20:12:02.808 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 20:12:02.972 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8080/
+30 03 2022 - 20:12:02.973 [main] INFO  io.javalin.Javalin - Javalin started in 181ms \o/
+30 03 2022 - 20:12:13.568 [JettyServerThreadPool-16] INFO  com.revature.main.Main - POST request received for /login
+30 03 2022 - 20:12:15.101 [JettyServerThreadPool-12] INFO  com.revature.main.Main - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 20:12:15.107 [JettyServerThreadPool-12] INFO  com.revature.main.Main - GET request received for /users/1/reimbursements
+30 03 2022 - 20:12:25.913 [JettyServerThreadPool-17] INFO  com.revature.main.Main - OPTIONS request received for /users/1/reimbursements
+30 03 2022 - 20:12:25.916 [JettyServerThreadPool-15] INFO  com.revature.main.Main - POST request received for /users/1/reimbursements
+30 03 2022 - 20:12:26.894 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
+com.google.cloud.storage.StorageException: 401 Unauthorized
+POST https://storage.googleapis.com/upload/storage/v1/b/project1-images/o?name=testing.jpg&uploadType=resumable
+	at com.google.cloud.storage.spi.v1.HttpStorageRpc.translate(HttpStorageRpc.java:233)
+	at com.google.cloud.storage.spi.v1.HttpStorageRpc.open(HttpStorageRpc.java:949)
+	at com.google.cloud.storage.ResumableMedia.lambda$null$0(ResumableMedia.java:37)
+	at com.google.api.gax.retrying.DirectRetryingExecutor.submit(DirectRetryingExecutor.java:105)
+	at com.google.cloud.RetryHelper.run(RetryHelper.java:76)
+	at com.google.cloud.RetryHelper.runWithRetries(RetryHelper.java:50)
+	at com.google.cloud.storage.Retrying.run(Retrying.java:51)
+	at com.google.cloud.storage.ResumableMedia.lambda$startUploadForBlobInfo$1(ResumableMedia.java:34)
+	at com.google.cloud.storage.BlobWriteChannel$Builder.build(BlobWriteChannel.java:315)
+	at com.google.cloud.storage.StorageImpl.writer(StorageImpl.java:577)
+	at com.google.cloud.storage.StorageImpl.writer(StorageImpl.java:547)
+	at com.google.cloud.storage.StorageImpl.createFrom(StorageImpl.java:232)
+	at com.google.cloud.storage.StorageImpl.createFrom(StorageImpl.java:223)
+	at com.revature.utility.CloudStorageUtility.uploadFile(CloudStorageUtility.java:21)
+	at com.revature.service.ReimbursementService.addReimbursement(ReimbursementService.java:66)
+	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:76)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.google.api.client.http.HttpResponseException: 401 Unauthorized
+POST https://storage.googleapis.com/upload/storage/v1/b/project1-images/o?name=testing.jpg&uploadType=resumable
+	at com.google.api.client.http.HttpResponseException$Builder.build(HttpResponseException.java:293)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1118)
+	at com.google.cloud.storage.spi.v1.HttpStorageRpc.open(HttpStorageRpc.java:942)
+	... 54 common frames omitted
+30 03 2022 - 20:12:26.905 [JettyServerThreadPool-17] INFO  com.revature.main.Main - GET request received for /users/1/reimbursements

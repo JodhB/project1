@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+</head>
+<body>
+    <h1>Welcome to the Manager page</h1>
+
+    <div>
+        <label for="filter-input">Reimbursement Status:</label>
+        <select id="filter-input" name = "filter-input">
+            <option value = "All">All</option>
+            <option value = "Pending">Pending</option>
+            <option value = "Denied">Denied</option>
+            <option value = "Approved">Approved</option>
+        </select>
+    </div>
+
+    <h2>Reimbursements Table</h2>
+    <table id="reimbursements-tbl" class="table">
+        <thead>
+            <th>Reimbursement Id</th>
+            <th>Reimbursement Amount</th>
+            <th>Submitted</th>
+            <th>Resolved</th>
+            <th>Description</th>
+            <th>Author</th>
+            <th>Resolver</th>
+            <th>Status</th>
+            <th>Type</th>
+            <th>Receipt</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <button id="logout-btn" class="button is-primary">logout</button>
+
+    <script src="manager-page.js"></script>
+</body>
+</html>
